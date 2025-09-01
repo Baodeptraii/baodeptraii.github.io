@@ -16,7 +16,7 @@ timezone:
 
 title: Re3on # the main title
 
-tagline: Just a guy ... # it will display as the subtitle
+tagline: Just a random guy on the Internet ... # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Just a guy ...
@@ -101,7 +101,7 @@ avatar: https://github.com/Baodeptraii/assets/blob/main/re3on.png?raw=true
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: https://i.pinimg.com/originals/ea/6b/6b/ea6b6b6dd95c815656c005272b11dca8.gif # string, local or CORS resources
+social_preview_image: https://github.com/Baodeptraii/assets/blob/main/re3on.png?raw=true # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
