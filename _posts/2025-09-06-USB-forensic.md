@@ -1,13 +1,13 @@
 ---
 title: "USB Mass Storage over PCAP"
-date: 2025-09-06 10:00:00 +0000
+date: 2025-09-06 10:00:00 +0700
 categories: [ctf]
 tags: [forensic, ctf, wireshark]
 ---
 
 # USB Mass Storage over PCAP
 
-Chào ae nhé 👋. Hôm nay nghịch vòng quanh CTF thì gặp một dạng bài khá thú vị: **USB truyền file qua PCAP**.  
+Chào ae nhé. Hôm nay nghịch vòng quanh CTF thì gặp một dạng bài khá thú vị: **USB truyền file qua PCAP**.  
 Nghe thì lạ nhưng thực ra cũng dễ hiểu thôi, mình note lại ở đây để ae tiện theo dõi.
 
 ## 1. USB Mass Storage trong Wireshark là gì?
@@ -15,11 +15,11 @@ Nghe thì lạ nhưng thực ra cũng dễ hiểu thôi, mình note lại ở đ
 Khi ae copy dữ liệu từ máy sang USB, **toàn bộ dữ liệu** đều bị ghi lại trong PCAP.  
 Nhưng **không phải raw file** như khi export object HTTP, mà dữ liệu sẽ bị chia thành nhiều block nhỏ (do USB driver quản lý), sau đó đóng gói và truyền đi qua cổng USB.  
 
-👉 Kết quả: Wireshark sẽ bắt được **hàng loạt packet** (có thể từ vài chục đến hàng nghìn, tuỳ kích thước file).
+Kết quả: Wireshark sẽ bắt được **hàng loạt packet** (có thể từ vài chục đến hàng nghìn, tuỳ kích thước file).
 
 ## 2. Bài toán trong CTF
 
-Vậy nhiệm vụ của ae là gì ? Ae đi tìm vị trí dữ liệu bắt đầu bị đóng gói -> export hết sạch đống gói tin đấy ra -> ghép lại -> rồi làm gì đó thêm nữa để khôi phục :v
+Vậy nhiệm vụ của ae là gì ? Ae đi tìm vị trí dữ liệu bắt đầu bị đóng gói -> export hết sạch đống gói tin đấy ra -> ghép lại -> rồi làm gì đó thêm nữa để khôi phục 
 
 Nhiệm vụ cơ bản:
 
@@ -32,16 +32,16 @@ Nhiệm vụ cơ bản:
 
 ### a. Mở file PCAP
 
-<img width="505" height="443" alt="image" src="https://github.com/user-attachments/assets/c48ca180-cf8a-485f-93a1-9e8588f31fc4" />
+<img width="505" height="443" alt="image" src="https://github.com/user-attachments/assets/c48ca180-cf8a-485f-93a1-9e8588f31fc4">
 
 Mở bằng Wireshark, thấy ngay nhiều giao thức USB:  
 
-<img width="1622" height="445" alt="image" src="https://github.com/user-attachments/assets/8d8b6ce6-a55f-4024-97ca-6f72efbe95da" />
+<img width="1622" height="445" alt="image" src="https://github.com/user-attachments/assets/8d8b6ce6-a55f-4024-97ca-6f72efbe95da">
 
 ### b. Phát hiện file bị copy
 Trong packet `607` có string **flag.tar.gz**, nhưng đó chỉ là tên file, **không chứa data**: 
 
-<img width="1529" height="277" alt="image" src="https://github.com/user-attachments/assets/c63972b8-03a5-4cf1-8c1d-0aae27b82b73" />
+<img width="1529" height="277" alt="image" src="https://github.com/user-attachments/assets/c63972b8-03a5-4cf1-8c1d-0aae27b82b73">
 
 Cái packet đấy chỉ chứa tên file được truyền đi thôi, còn data thật sẽ nằm ở **SCSI: Data Out** (data bị truyền đi). Okay, đáp cái filter cho cá mập lọc hết đống packet Data out đấy ra rồi export hết sạch sành sanh nó ra thành 1 file pcap mới. 
 Mình đã biết nó là file **.gz** rồi nhỉ, thế thì chỉ cần đi tìm đoạn data nào chứa header magic bytes của **.gz** rồi export là được. Code python đây: 
