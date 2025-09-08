@@ -5,8 +5,6 @@ categories: [ctf]
 tags: [forensic, ctf, wireshark]
 ---
 
-# USB Mass Storage over PCAP
-
 Chào ae nhé. Hôm nay nghịch vòng quanh CTF thì gặp một dạng bài khá thú vị: **USB truyền file qua PCAP**.  
 Nghe thì lạ nhưng thực ra cũng dễ hiểu thôi, mình note lại ở đây để ae tiện theo dõi.
 
@@ -14,7 +12,6 @@ Nghe thì lạ nhưng thực ra cũng dễ hiểu thôi, mình note lại ở đ
 
 Khi ae copy dữ liệu từ máy sang USB, **toàn bộ dữ liệu** đều bị ghi lại trong PCAP.  
 Nhưng **không phải raw file** như khi export object HTTP, mà dữ liệu sẽ bị chia thành nhiều block nhỏ (do USB driver quản lý), sau đó đóng gói và truyền đi qua cổng USB.  
-
 Kết quả: Wireshark sẽ bắt được **hàng loạt packet** (có thể từ vài chục đến hàng nghìn, tuỳ kích thước file).
 
 ## 2. Bài toán trong CTF
@@ -22,7 +19,6 @@ Kết quả: Wireshark sẽ bắt được **hàng loạt packet** (có thể t�
 Vậy nhiệm vụ của ae là gì ? Ae đi tìm vị trí dữ liệu bắt đầu bị đóng gói -> export hết sạch đống gói tin đấy ra -> ghép lại -> rồi làm gì đó thêm nữa để khôi phục 
 
 Nhiệm vụ cơ bản:
-
 1. Tìm vị trí bắt đầu dữ liệu được ghi (SCSI: Data Out).  
 2. Export toàn bộ packet chứa payload.  
 3. Ghép lại thành binary.  
