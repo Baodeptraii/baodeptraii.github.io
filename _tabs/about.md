@@ -9,12 +9,12 @@ order: 4
 Hi, I'm **Re3on**!  
 I'm currently a student at **PTIT**, passionate about **cybersecurity**.  
 I enjoy building some shitty projects, exploring new technologies, and constantly learning.
-I do some CTF Challenge with my team [SECJOTA](https://ctftime.org/team/354523), we are trying to get into Vietnam's leaderboard ranking.
+I do some CTF Challenge with my team [SECJOTA](https://ctftime.org/team/354523), our best ranking is 850 Worldwide - 43 Vietnam.
 
 # 🔗 My GitHub
 
-Check out my projects and contributions on [GitHub](https://github.com/Baodeptraii).  
-Or reading my [Write-up](https://github.com/Baodeptraii/CTF_Writeup).
+Check out my [GitHub](https://github.com/Baodeptraii).  
+Or reading my CTF's [Write-up](https://github.com/Baodeptraii/CTF_Writeup).
 
 # 🎉 Fun Fact
 
