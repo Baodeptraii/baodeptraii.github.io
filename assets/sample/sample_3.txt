@@ -1,0 +1,999 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.26",
+  "_id": "bTPc7J4BGJeD6mLEuX0d",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "cluster": {
+      "node": "customer-node",
+      "name": "wazuh_cluster"
+    },
+    "agent": {
+      "hostname": "sensor",
+      "ip": "192.168.100.54",
+      "name": "agent1",
+      "id": "825",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "PowerShell.EXE",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "product": "Microsoft® Windows® Operating System",
+          "parentProcessGuid": "{808eb54a-8a21-6a38-a53f-060000005900}",
+          "description": "Windows PowerShell",
+          "parentCommandLine": "C:\\\\WINDOWS\\\\SYSTEM32\\\\cmd.exe /c \\\"\\\"C:\\\\ProgramData\\\\Online_KMS_Activation\\\\Activate.cmd\\\" Task\\\"",
+          "logonGuid": "{808eb54a-1d29-6a29-e703-000000000000}",
+          "processGuid": "{808eb54a-8a6a-6a38-8840-060000005900}",
+          "logonId": "0x3e7",
+          "parentProcessId": "3852",
+          "processId": "3244",
+          "currentDirectory": "C:\\\\Windows\\\\System32\\\\",
+          "utcTime": "2026-06-22 01:05:46.153",
+          "hashes": "SHA1=EB42621654E02FAF2DE940442B6DEB1A77864E5B,MD5=A97E6573B97B44C96122BFA543A82EA1,SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46,IMPHASH=AFACF6DC9041114B198160AAB4D0AE77",
+          "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+          "ruleName": "technique_id=T1059,technique_name=Command-Line Interface",
+          "company": "Microsoft Corporation",
+          "integrityLevel": "System",
+          "commandLine": "powershell  \\\"$t = New-Object Net.Sockets.TcpClient;try{$t.Connect(\\\"\\\"\\\"kms.srv.crsoo.com\\\"\\\"\\\", 1688)}catch{};$t.Connected\\\"",
+          "fileVersion": "10.0.26100.5074 (WinBuild.160101.0800)",
+          "user": "NT AUTHORITY\\\\SYSTEM",
+          "parentUser": "NT AUTHORITY\\\\SYSTEM",
+          "terminalSessionId": "0"
+        },
+        "system": {
+          "eventID": "1",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Process Create:\r\nRuleName: technique_id=T1059,technique_name=Command-Line Interface\r\nUtcTime: 2026-06-22 01:05:46.153\r\nProcessGuid: {808eb54a-8a6a-6a38-8840-060000005900}\r\nProcessId: 3244\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nFileVersion: 10.0.26100.5074 (WinBuild.160101.0800)\r\nDescription: Windows PowerShell\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: PowerShell.EXE\r\nCommandLine: powershell  \"$t = New-Object Net.Sockets.TcpClient;try{$t.Connect(\"\"\"kms.srv.crsoo.com\"\"\", 1688)}catch{};$t.Connected\" \r\nCurrentDirectory: C:\\Windows\\System32\\\r\nUser: NT AUTHORITY\\SYSTEM\r\nLogonGuid: {808eb54a-1d29-6a29-e703-000000000000}\r\nLogonId: 0x3E7\r\nTerminalSessionId: 0\r\nIntegrityLevel: System\r\nHashes: SHA1=EB42621654E02FAF2DE940442B6DEB1A77864E5B,MD5=A97E6573B97B44C96122BFA543A82EA1,SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46,IMPHASH=AFACF6DC9041114B198160AAB4D0AE77\r\nParentProcessGuid: {808eb54a-8a21-6a38-a53f-060000005900}\r\nParentProcessId: 3852\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: C:\\WINDOWS\\SYSTEM32\\cmd.exe /c \"\"C:\\ProgramData\\Online_KMS_Activation\\Activate.cmd\" Task\"\r\nParentUser: NT AUTHORITY\\SYSTEM\"",
+          "systemTime": "2026-06-22T01:05:46.1671444Z",
+          "version": "5",
+          "threadID": "5940",
+          "eventRecordID": "13305948",
+          "computer": "computer1",
+          "task": "1",
+          "processID": "4036",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "manager": {
+      "name": "sensor"
+    },
+    "log": {
+      "file": {
+        "path": "/var/ossec/logs/alerts/alerts.json"
+      },
+      "offset": 2734801011
+    },
+    "rule": {
+      "firedtimes": 703,
+      "mail": false,
+      "level": 3,
+      "groups": [
+        "sysmon",
+        "sysmon_eid1_detections",
+        "windows"
+      ],
+      "description": "Suspicious Windows cmd shell execution",
+      "mitre": {
+        "technique": [
+          "Account Discovery",
+          "Windows Command Shell"
+        ],
+        "id": [
+          "T1087",
+          "T1059.003"
+        ],
+        "tactic": [
+          "Discovery",
+          "Execution"
+        ]
+      },
+      "id": "92032"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "type": "customer-wazuh-alerts",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@version": "1",
+    "location": "EventChannel",
+    "id": "1782090346.4265626433",
+    "fields": {
+      "log_type": "wazuh-alerts",
+      "tags": [
+        "wazuh",
+        "cmccs-xdr",
+        "customer"
+      ]
+    },
+    "customer": "customer",
+    "timestamp": "2026-06-22T01:05:46.695+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-06-22T01:05:46.695Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@agent1@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@3244@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782090346695
+  ]
+}
+{
+  "_index": "wazuh-alerts-4.x-2026.26",
+  "_id": "bzPc7J4BGJeD6mLEuX0d",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "cluster": {
+      "node": "customer-node",
+      "name": "wazuh_cluster"
+    },
+    "agent": {
+      "hostname": "sensor-customer-01",
+      "ip": "192.168.100.54",
+      "name": "computer1",
+      "id": "825",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "mscoree.dll",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "product": "Microsoft® Windows® Operating System",
+          "signature": "Microsoft Windows",
+          "signed": "true",
+          "imageLoaded": "C:\\\\Windows\\\\System32\\\\mscoree.dll",
+          "description": "Microsoft .NET Runtime Execution Engine",
+          "signatureStatus": "Valid",
+          "processGuid": "{808eb54a-8a6a-6a38-8840-060000005900}",
+          "processId": "3244",
+          "utcTime": "2026-06-22 01:05:46.184",
+          "hashes": "SHA1=832627F610A3900FA9B0DB77CFF27168DB836A6A,MD5=1DC1B5FC0E47414580644B07C30F0E3D,SHA256=07F1EA065C452D37DA2AD56CE505184E41947C42A560D8235276E0FB8B758701,IMPHASH=CDE7B90B871501A5DFCA7B3AB565C6A1",
+          "ruleName": "technique_id=T1055,technique_name=Process Injection",
+          "company": "Microsoft Corporation",
+          "fileVersion": "10.0.26100.3624 (WinBuild.160101.0800)",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        },
+        "system": {
+          "eventID": "7",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Image loaded:\r\nRuleName: technique_id=T1055,technique_name=Process Injection\r\nUtcTime: 2026-06-22 01:05:46.184\r\nProcessGuid: {808eb54a-8a6a-6a38-8840-060000005900}\r\nProcessId: 3244\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nImageLoaded: C:\\Windows\\System32\\mscoree.dll\r\nFileVersion: 10.0.26100.3624 (WinBuild.160101.0800)\r\nDescription: Microsoft .NET Runtime Execution Engine\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: mscoree.dll\r\nHashes: SHA1=832627F610A3900FA9B0DB77CFF27168DB836A6A,MD5=1DC1B5FC0E47414580644B07C30F0E3D,SHA256=07F1EA065C452D37DA2AD56CE505184E41947C42A560D8235276E0FB8B758701,IMPHASH=CDE7B90B871501A5DFCA7B3AB565C6A1\r\nSigned: true\r\nSignature: Microsoft Windows\r\nSignatureStatus: Valid\r\nUser: NT AUTHORITY\\SYSTEM\"",
+          "systemTime": "2026-06-22T01:05:46.2142185Z",
+          "version": "3",
+          "threadID": "5948",
+          "eventRecordID": "13305949",
+          "computer": "computer1",
+          "task": "7",
+          "processID": "4036",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "manager": {
+      "name": "sensor-customer-01"
+    },
+    "log": {
+      "file": {
+        "path": "/var/ossec/logs/alerts/alerts.json"
+      },
+      "offset": 2734818793
+    },
+    "rule": {
+      "firedtimes": 1184,
+      "mail": false,
+      "level": 3,
+      "groups": [
+        "windows",
+        "sysmon",
+        "sysmon_event7"
+      ],
+      "description": "Sysmon - Event 7: Image loaded by C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+      "mitre": {
+        "technique": [
+          "Process Injection"
+        ],
+        "id": [
+          "T1055"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "106104"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "type": "customer-wazuh-alerts",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@version": "1",
+    "location": "EventChannel",
+    "id": "1782090346.4265654087",
+    "fields": {
+      "log_type": "wazuh-alerts",
+      "tags": [
+        "wazuh",
+        "cmccs-xdr",
+        "customer"
+      ]
+    },
+    "customer": "customer",
+    "timestamp": "2026-06-22T01:05:46.712+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-06-22T01:05:46.712Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@computer1@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@3244@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782090346712
+  ]
+}
+{
+  "_index": "wazuh-alerts-4.x-2026.26",
+  "_id": "bDPc7J4BGJeD6mLEuX0d",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "cluster": {
+      "node": "customer-node",
+      "name": "wazuh_cluster"
+    },
+    "agent": {
+      "hostname": "sensor-customer-01",
+      "ip": "192.168.100.54",
+      "name": "computer1",
+      "id": "825",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "mscoreei.dll",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "product": "Microsoft® .NET Framework",
+          "signature": "Microsoft Corporation",
+          "signed": "true",
+          "imageLoaded": "C:\\\\Windows\\\\Microsoft.NET\\\\Framework64\\\\v4.0.30319\\\\mscoreei.dll",
+          "description": "Microsoft .NET Runtime Execution Engine",
+          "signatureStatus": "Valid",
+          "processGuid": "{808eb54a-8a6a-6a38-8840-060000005900}",
+          "processId": "3244",
+          "utcTime": "2026-06-22 01:05:46.237",
+          "hashes": "SHA1=31418E7F22DCAE61E9BF4D5159F190589510263A,MD5=1A45E030D20C805BD72525A8F16507F7,SHA256=D6279FF94F98EFFD9579A31A2C1FA2DA7997F066D2F62097D2A381D83DFB9B53,IMPHASH=BDAAD270BEE58C9A3A7622CD1CA3EF79",
+          "ruleName": "technique_id=T1055,technique_name=Process Injection",
+          "company": "Microsoft Corporation",
+          "fileVersion": "4.8.9221.0 built by: NET481REL1LAST_25H2",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        },
+        "system": {
+          "eventID": "7",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Image loaded:\r\nRuleName: technique_id=T1055,technique_name=Process Injection\r\nUtcTime: 2026-06-22 01:05:46.237\r\nProcessGuid: {808eb54a-8a6a-6a38-8840-060000005900}\r\nProcessId: 3244\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nImageLoaded: C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscoreei.dll\r\nFileVersion: 4.8.9221.0 built by: NET481REL1LAST_25H2\r\nDescription: Microsoft .NET Runtime Execution Engine\r\nProduct: Microsoft® .NET Framework\r\nCompany: Microsoft Corporation\r\nOriginalFileName: mscoreei.dll\r\nHashes: SHA1=31418E7F22DCAE61E9BF4D5159F190589510263A,MD5=1A45E030D20C805BD72525A8F16507F7,SHA256=D6279FF94F98EFFD9579A31A2C1FA2DA7997F066D2F62097D2A381D83DFB9B53,IMPHASH=BDAAD270BEE58C9A3A7622CD1CA3EF79\r\nSigned: true\r\nSignature: Microsoft Corporation\r\nSignatureStatus: Valid\r\nUser: NT AUTHORITY\\SYSTEM\"",
+          "systemTime": "2026-06-22T01:05:46.2468469Z",
+          "version": "3",
+          "threadID": "5948",
+          "eventRecordID": "13305950",
+          "computer": "computer1",
+          "task": "7",
+          "processID": "4036",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "manager": {
+      "name": "sensor-customer-01"
+    },
+    "log": {
+      "file": {
+        "path": "/var/ossec/logs/alerts/alerts.json"
+      },
+      "offset": 2734836219
+    },
+    "rule": {
+      "firedtimes": 1185,
+      "mail": false,
+      "level": 3,
+      "groups": [
+        "windows",
+        "sysmon",
+        "sysmon_event7"
+      ],
+      "description": "Sysmon - Event 7: Image loaded by C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+      "mitre": {
+        "technique": [
+          "Process Injection"
+        ],
+        "id": [
+          "T1055"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "106104"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "type": "customer-wazuh-alerts",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@version": "1",
+    "location": "EventChannel",
+    "id": "1782090346.4265682388",
+    "fields": {
+      "log_type": "wazuh-alerts",
+      "tags": [
+        "wazuh",
+        "cmccs-xdr",
+        "customer"
+      ]
+    },
+    "customer": "customer",
+    "timestamp": "2026-06-22T01:05:46.728+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-06-22T01:05:46.728Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@computer1@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@3244@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782090346728
+  ]
+}
+{
+  "_index": "wazuh-alerts-4.x-2026.26",
+  "_id": "-TPc7J4BGJeD6mLEwZps",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "cluster": {
+      "node": "customer-node",
+      "name": "wazuh_cluster"
+    },
+    "agent": {
+      "hostname": "sensor-customer-01",
+      "ip": "192.168.100.54",
+      "name": "computer1",
+      "id": "825",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetObject": "HKU\\\\.DEFAULT\\\\Software\\\\Microsoft\\\\SystemCertificates\\\\Root\\\\Certificates",
+          "processGuid": "{808eb54a-8a6a-6a38-8840-060000005900}",
+          "processId": "3244",
+          "utcTime": "2026-06-22 01:05:48.512",
+          "ruleName": "technique_id=T1130,technique_name=Install Root Certificate",
+          "eventType": "CreateKey",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        },
+        "system": {
+          "eventID": "12",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Registry object added or deleted:\r\nRuleName: technique_id=T1130,technique_name=Install Root Certificate\r\nEventType: CreateKey\r\nUtcTime: 2026-06-22 01:05:48.512\r\nProcessGuid: {808eb54a-8a6a-6a38-8840-060000005900}\r\nProcessId: 3244\r\nImage: C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\.DEFAULT\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates\r\nUser: NT AUTHORITY\\SYSTEM\"",
+          "systemTime": "2026-06-22T01:05:48.5136945Z",
+          "version": "2",
+          "threadID": "5940",
+          "eventRecordID": "13305966",
+          "computer": "computer1",
+          "task": "12",
+          "processID": "4036",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "manager": {
+      "name": "sensor-customer-01"
+    },
+    "log": {
+      "file": {
+        "path": "/var/ossec/logs/alerts/alerts.json"
+      },
+      "offset": 2738472197
+    },
+    "rule": {
+      "firedtimes": 1220,
+      "mail": false,
+      "level": 3,
+      "groups": [
+        "windows",
+        "sysmon",
+        "sysmon_event_12"
+      ],
+      "description": "Sysmon - Event 12: RegistryEvent (Object create and delete) by C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+      "id": "111138"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "type": "customer-wazuh-alerts",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@version": "1",
+    "location": "EventChannel",
+    "id": "1782090349.4271681854",
+    "fields": {
+      "log_type": "wazuh-alerts",
+      "tags": [
+        "wazuh",
+        "cmccs-xdr",
+        "customer"
+      ]
+    },
+    "customer": "customer",
+    "timestamp": "2026-06-22T01:05:49.819+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-06-22T01:05:49.819Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@computer1@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@3244@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782090349819
+  ]
+}
+{
+  "_index": "wazuh-alerts-4.x-2026.26",
+  "_id": "IjPc7J4BGJeD6mLEwZts",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "cluster": {
+      "node": "customer-node",
+      "name": "wazuh_cluster"
+    },
+    "agent": {
+      "hostname": "sensor-customer-01",
+      "ip": "192.168.100.54",
+      "name": "computer1",
+      "id": "825",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "processGuid": "{808eb54a-8a6a-6a38-8840-060000005900}",
+          "processId": "3244",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_ofg3pwmw.y2n.psm1",
+          "utcTime": "2026-06-22 01:05:48.893",
+          "ruleName": "technique_id=T1047,technique_name=File System Permissions Weakness",
+          "creationUtcTime": "2026-06-22 01:05:48.893",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        },
+        "system": {
+          "eventID": "11",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"File created:\r\nRuleName: technique_id=T1047,technique_name=File System Permissions Weakness\r\nUtcTime: 2026-06-22 01:05:48.893\r\nProcessGuid: {808eb54a-8a6a-6a38-8840-060000005900}\r\nProcessId: 3244\r\nImage: C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_ofg3pwmw.y2n.psm1\r\nCreationUtcTime: 2026-06-22 01:05:48.893\r\nUser: NT AUTHORITY\\SYSTEM\"",
+          "systemTime": "2026-06-22T01:05:48.8939792Z",
+          "version": "2",
+          "threadID": "5940",
+          "eventRecordID": "13305975",
+          "computer": "computer1",
+          "task": "11",
+          "processID": "4036",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "manager": {
+      "name": "sensor-customer-01"
+    },
+    "log": {
+      "file": {
+        "path": "/var/ossec/logs/alerts/alerts.json"
+      },
+      "offset": 2738605365
+    },
+    "rule": {
+      "firedtimes": 30568,
+      "mail": false,
+      "level": 3,
+      "groups": [
+        "windows",
+        "sysmon",
+        "sysmon_event_11"
+      ],
+      "description": "Sysmon - Event 11: FileCreate by C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+      "mitre": {
+        "technique": [
+          "Windows Management Instrumentation"
+        ],
+        "id": [
+          "T1047"
+        ],
+        "tactic": [
+          "Execution"
+        ]
+      },
+      "id": "110109"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "type": "customer-wazuh-alerts",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@version": "1",
+    "location": "EventChannel",
+    "id": "1782090349.4271911128",
+    "fields": {
+      "log_type": "wazuh-alerts",
+      "tags": [
+        "wazuh",
+        "cmccs-xdr",
+        "customer"
+      ]
+    },
+    "customer": "customer",
+    "timestamp": "2026-06-22T01:05:49.931+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-06-22T01:05:49.931Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@computer1@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@3244@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782090349931
+  ]
+}
+{
+  "_index": "wazuh-alerts-4.x-2026.26",
+  "_id": "3sw77Z4BGJeD6mLE_ZIf",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "cluster": {
+      "node": "customer-node",
+      "name": "wazuh_cluster"
+    },
+    "agent": {
+      "hostname": "sensor-customer-01",
+      "ip": "192.168.100.54",
+      "name": "computer1",
+      "id": "825",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\WINDOWS\\\\system32\\\\conhost.exe",
+          "targetObject": "HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\bam\\\\State\\\\UserSettings\\\\S-1-5-21-3526363707-1736797334-1302344526-1001\\\\\\\\Device\\\\HarddiskVolume3\\\\Windows\\\\System32\\\\conhost.exe",
+          "processGuid": "{808eb54a-a2cc-6a38-9b72-060000005900}",
+          "processId": "3244",
+          "utcTime": "2026-06-22 02:49:48.710",
+          "ruleName": "technique_id=T1543,technique_name=Service Creation",
+          "details": "Binary Data",
+          "eventType": "SetValue",
+          "user": "user"
+        },
+        "system": {
+          "eventID": "13",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Registry value set:\r\nRuleName: technique_id=T1543,technique_name=Service Creation\r\nEventType: SetValue\r\nUtcTime: 2026-06-22 02:49:48.710\r\nProcessGuid: {808eb54a-a2cc-6a38-9b72-060000005900}\r\nProcessId: 3244\r\nImage: C:\\WINDOWS\\system32\\conhost.exe\r\nTargetObject: HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-3526363707-1736797334-1302344526-1001\\\\Device\\HarddiskVolume3\\Windows\\System32\\conhost.exe\r\nDetails: Binary Data\r\nUser: computer1\\user\"",
+          "systemTime": "2026-06-22T02:49:48.7110094Z",
+          "version": "2",
+          "threadID": "5940",
+          "eventRecordID": "13342454",
+          "computer": "computer1",
+          "task": "13",
+          "processID": "4036",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "manager": {
+      "name": "sensor-customer-01"
+    },
+    "log": {
+      "file": {
+        "path": "/var/ossec/logs/alerts/alerts.json"
+      },
+      "offset": 8885627220
+    },
+    "rule": {
+      "firedtimes": 98600,
+      "mail": false,
+      "level": 3,
+      "groups": [
+        "windows",
+        "sysmon",
+        "sysmon_event_13"
+      ],
+      "description": "Sysmon - Event 13: RegistryEvent (Value Set) by C:\\\\WINDOWS\\\\system32\\\\conhost.exe",
+      "mitre": {
+        "technique": [
+          "Create or Modify System Process"
+        ],
+        "id": [
+          "T1543"
+        ],
+        "tactic": [
+          "Persistence",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "112122"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "type": "customer-wazuh-alerts",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@version": "1",
+    "location": "EventChannel",
+    "id": "1782096590.1405670646",
+    "fields": {
+      "log_type": "wazuh-alerts",
+      "tags": [
+        "wazuh",
+        "cmccs-xdr",
+        "customer"
+      ]
+    },
+    "customer": "customer",
+    "timestamp": "2026-06-22T02:49:50.783+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-06-22T02:49:50.783Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@computer1@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@3244@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782096590783
+  ]
+}
+{
+  "_index": "wazuh-alerts-4.x-2026.26",
+  "_id": "HiVN7Z4BGJeD6mLEGcql",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "cluster": {
+      "node": "customer-node",
+      "name": "wazuh_cluster"
+    },
+    "agent": {
+      "hostname": "sensor-customer-01",
+      "ip": "192.168.100.54",
+      "name": "computer1",
+      "id": "825",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\WINDOWS\\\\system32\\\\conhost.exe",
+          "targetObject": "HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\bam\\\\State\\\\UserSettings\\\\S-1-5-21-3526363707-1736797334-1302344526-1001\\\\\\\\Device\\\\HarddiskVolume3\\\\Windows\\\\System32\\\\conhost.exe",
+          "processGuid": "{808eb54a-a72e-6a38-567b-060000005900}",
+          "processId": "3244",
+          "utcTime": "2026-06-22 03:08:30.708",
+          "ruleName": "technique_id=T1543,technique_name=Service Creation",
+          "details": "Binary Data",
+          "eventType": "SetValue",
+          "user": "user"
+        },
+        "system": {
+          "eventID": "13",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Registry value set:\r\nRuleName: technique_id=T1543,technique_name=Service Creation\r\nEventType: SetValue\r\nUtcTime: 2026-06-22 03:08:30.708\r\nProcessGuid: {808eb54a-a72e-6a38-567b-060000005900}\r\nProcessId: 3244\r\nImage: C:\\WINDOWS\\system32\\conhost.exe\r\nTargetObject: HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-3526363707-1736797334-1302344526-1001\\\\Device\\HarddiskVolume3\\Windows\\System32\\conhost.exe\r\nDetails: Binary Data\r\nUser: computer1\\user\"",
+          "systemTime": "2026-06-22T03:08:30.7093050Z",
+          "version": "2",
+          "threadID": "5940",
+          "eventRecordID": "13348541",
+          "computer": "computer1",
+          "task": "13",
+          "processID": "4036",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "manager": {
+      "name": "sensor-customer-01"
+    },
+    "log": {
+      "file": {
+        "path": "/var/ossec/logs/alerts/alerts.json"
+      },
+      "offset": 9825053274
+    },
+    "rule": {
+      "firedtimes": 16704,
+      "mail": false,
+      "level": 3,
+      "groups": [
+        "windows",
+        "sysmon",
+        "sysmon_event_13"
+      ],
+      "description": "Sysmon - Event 13: RegistryEvent (Value Set) by C:\\\\WINDOWS\\\\system32\\\\conhost.exe",
+      "mitre": {
+        "technique": [
+          "Create or Modify System Process"
+        ],
+        "id": [
+          "T1543"
+        ],
+        "tactic": [
+          "Persistence",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "112122"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "type": "customer-wazuh-alerts",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@version": "1",
+    "location": "EventChannel",
+    "id": "1782097712.1557631585",
+    "fields": {
+      "log_type": "wazuh-alerts",
+      "tags": [
+        "wazuh",
+        "cmccs-xdr",
+        "customer"
+      ]
+    },
+    "customer": "customer",
+    "timestamp": "2026-06-22T03:08:32.009+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-06-22T03:08:32.009Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@computer1@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@3244@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782097712009
+  ]
+}
+{
+  "_index": "wazuh-alerts-4.x-2026.26",
+  "_id": "gdBs7Z4BGJeD6mLEH6vE",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "cluster": {
+      "node": "customer-node",
+      "name": "wazuh_cluster"
+    },
+    "agent": {
+      "hostname": "sensor-customer-01",
+      "ip": "192.168.100.54",
+      "name": "computer1",
+      "id": "825",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\MPI\\\\EGP-AGENT\\\\vlxjre\\\\bin\\\\pidchecker.exe",
+          "targetObject": "HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\bam\\\\State\\\\UserSettings\\\\S-1-5-21-3526363707-1736797334-1302344526-1001\\\\\\\\Device\\\\HarddiskVolume3\\\\Windows\\\\System32\\\\conhost.exe",
+          "processGuid": "{808eb54a-af1f-6a38-8a8b-060000005900}",
+          "processId": "3244",
+          "utcTime": "2026-06-22 03:42:23.604",
+          "ruleName": "technique_id=T1543,technique_name=Service Creation",
+          "details": "Binary Data",
+          "eventType": "SetValue",
+          "user": "user"
+        },
+        "system": {
+          "eventID": "13",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Registry value set:\r\nRuleName: technique_id=T1543,technique_name=Service Creation\r\nEventType: SetValue\r\nUtcTime: 2026-06-22 03:42:23.604\r\nProcessGuid: {808eb54a-af1f-6a38-8a8b-060000005900}\r\nProcessId: 3244\r\nImage: C:\\MPI\\EGP-AGENT\\vlxjre\\bin\\pidchecker.exe\r\nTargetObject: HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-3526363707-1736797334-1302344526-1001\\\\Device\\HarddiskVolume3\\Windows\\System32\\conhost.exe\r\nDetails: Binary Data\r\nUser: computer1\\user\"",
+          "systemTime": "2026-06-22T03:42:23.6058397Z",
+          "version": "2",
+          "threadID": "5940",
+          "eventRecordID": "13360943",
+          "computer": "computer1",
+          "task": "13",
+          "processID": "4036",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "manager": {
+      "name": "sensor-customer-01"
+    },
+    "log": {
+      "file": {
+        "path": "/var/ossec/logs/alerts/alerts.json"
+      },
+      "offset": 11497522166
+    },
+    "rule": {
+      "firedtimes": 80405,
+      "mail": false,
+      "level": 3,
+      "groups": [
+        "windows",
+        "sysmon",
+        "sysmon_event_13"
+      ],
+      "description": "Sysmon - Event 13: RegistryEvent (Value Set) by C:\\\\MPI\\\\EGP-AGENT\\\\vlxjre\\\\bin\\\\pidchecker.exe",
+      "mitre": {
+        "technique": [
+          "Create or Modify System Process"
+        ],
+        "id": [
+          "T1543"
+        ],
+        "tactic": [
+          "Persistence",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "112122"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "type": "customer-wazuh-alerts",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@version": "1",
+    "location": "EventChannel",
+    "id": "1782099744.1831889608",
+    "fields": {
+      "log_type": "wazuh-alerts",
+      "tags": [
+        "wazuh",
+        "cmccs-xdr",
+        "customer"
+      ]
+    },
+    "customer": "customer",
+    "timestamp": "2026-06-22T03:42:24.933+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-06-22T03:42:24.933Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@computer1@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@3244@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782099744933
+  ]
+}

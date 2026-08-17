@@ -1,0 +1,572 @@
+{
+  "_index": "sensor",
+  "_id": "7JjIXp4BUYBMq4VWYizw",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "orig_pkts": 41,
+    "log": {
+      "file": {
+        "path": "/opt/zeek/logs/current/conn.log"
+      },
+      "offset": 103968663
+    },
+    "duration": 75.65818405151367,
+    "id.orig_p": 60773,
+    "resp_bytes": 108499,
+    "id.orig_h": "192.168.92.123",
+    "@version": "1",
+    "service": "http",
+    "ip_proto": 6,
+    "id.resp_h": "216.250.121.9",
+    "local_resp": false,
+    "type": "zeek-metrics",
+    "resp_pkts": 83,
+    "resp_ip_bytes": 111831,
+    "uid": "Cds9eL3cm7I6kElbTd",
+    "proto": "tcp",
+    "orig_bytes": 682,
+    "agent": {
+      "name": "mylab",
+      "id": "c7cafb6c-2371-4ead-8bb9-024afbf25c3c",
+      "ephemeral_id": "5a2fd6c8-fbde-4daa-a357-24eb40c65f7d",
+      "version": "7.17.15",
+      "hostname": "mylab",
+      "type": "filebeat"
+    },
+    "history": "ShADadfF",
+    "id.resp_p": 80,
+    "missed_bytes": 0,
+    "local_orig": true,
+    "@timestamp": "2026-05-25T10:57:31.314Z",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "ts": 1779706567.991111,
+    "conn_state": "SF",
+    "orig_ip_bytes": 2334
+  },
+  "fields": {
+    "@timestamp": [
+      "2026-05-25T10:57:31.314Z"
+    ]
+  },
+    "sort": [
+    1779706651314
+  ]
+}
+{
+  "_index": "sensor",
+  "_id": "VJPHXp4BUYBMq4VWLWvv",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "log": {
+      "file": {
+        "path": "/opt/zeek/logs/current/http.log"
+      },
+      "offset": 4229852
+    },
+    "status_msg": "OK",
+    "id.orig_p": 60773,
+    "request_body_len": 0,
+    "trans_depth": 1,
+    "resp_mime_types": [
+      "text/html"
+    ],
+    "user_agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.6189.1627 Safari/537.36",
+    "id.orig_h": "192.168.92.123",
+    "referrer": "http://www.iwsf.com/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/oldnews083103-030104.htm",
+    "@version": "1",
+    "id.resp_h": "216.250.121.9",
+    "resp_fuids": [
+      "FlAWST1Z5n4XZ95nE6"
+    ],
+    "type": "zeek-metrics",
+    "uid": "Cds9eL3cm7I6kElbTd",
+    "uri": "/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/arisf180.jpg",
+    "agent": {
+      "name": "mylab",
+      "id": "c7cafb6c-2371-4ead-8bb9-024afbf25c3c",
+      "ephemeral_id": "5a2fd6c8-fbde-4daa-a357-24eb40c65f7d",
+      "version": "7.17.15",
+      "hostname": "mylab",
+      "type": "filebeat"
+    },
+    "id.resp_p": 80,
+    "status_code": 200,
+    "response_body_len": 106774,
+    "method": "GET",
+    "@timestamp": "2026-05-25T10:56:12.212Z",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "ts": 1779706568.315572
+  },
+  "fields": {
+    "@timestamp": [
+      "2026-05-25T10:56:12.212Z"
+    ]
+  },
+    "sort": [
+    1779706572212
+  ]
+}
+{
+  "_index": "sensor",
+  "_id": "3ZPHXp4BUYBMq4VWKlcj",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "log": {
+      "file": {
+        "path": "/opt/zeek/logs/current/files.log"
+      },
+      "offset": 6680051
+    },
+    "duration": 0.8702211380004883,
+    "id.orig_p": 60773,
+    "overflow_bytes": 0,
+    "sha1": "2ed0829713b505cb942fc8b67a2b0b4f35455593",
+    "id.orig_h": "192.168.92.123",
+    "source": "HTTP",
+    "@version": "1",
+    "is_orig": false,
+    "analyzers": [
+      "SHA1",
+      "MD5"
+    ],
+    },
+    "missing_bytes": 0,
+    "id.resp_h": "216.250.121.9",
+    "fuid": "FlAWST1Z5n4XZ95nE6",
+    "type": "zeek-metrics",
+    "timedout": false,
+    "uid": "Cds9eL3cm7I6kElbTd",
+    "seen_bytes": 106774,
+    "agent": {
+      "name": "mylab",
+      "id": "c7cafb6c-2371-4ead-8bb9-024afbf25c3c",
+      "ephemeral_id": "5a2fd6c8-fbde-4daa-a357-24eb40c65f7d",
+      "version": "7.17.15",
+      "hostname": "mylab",
+      "type": "filebeat"
+    },
+    "id.resp_p": 80,
+    "mime_type": "text/html",
+    "local_orig": false,
+    "@timestamp": "2026-05-25T10:56:11.245Z",
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "md5": "60dc93e148888eaa73cfeac1b33299ff",
+    "depth": 0,
+    "ts": 1779706568.617122
+  },
+  "fields": {
+    "@timestamp": [
+      "2026-05-25T10:56:11.245Z"
+    ]
+  },
+    "sort": [
+    1779706571245
+  ]
+}
+{
+  "_index": "sensor",
+  "_id": "XJPHXp4BUYBMq4VWJkol",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "app_proto": "http",
+    "log": {
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      },
+      "offset": 111209791
+    },
+    "ts_progress": "request_complete",
+    "tx_id": 0,
+    "http": {
+      "url": "/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/arisf180.jpg",
+      "http_user_agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.6189.1627 Safari/537.36",
+      "protocol": "HTTP/1.1",
+      "http_content_type": "text/html",
+      "status": 200,
+      "length": 46060,
+      "http_method": "GET",
+      "http_refer": "http://www.iwsf.com/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/oldnews083103-030104.htm",
+      "hostname": "www.iwsf.com"
+    },
+    "flow": {
+      "src_port": 60773,
+      "bytes_toclient": 49706,
+      "start": "2026-05-25T17:56:07.991111+0700",
+      "bytes_toserver": 1642,
+      "pkts_toclient": 37,
+      "dest_ip": "216.250.121.9",
+      "pkts_toserver": 16,
+      "src_ip": "192.168.92.123",
+      "dest_port": 80
+    },
+    "in_iface": "enp2s0",
+    "dest_ip": "192.168.92.123",
+    "dest_port": 60773,
+    "pkt_src": "wire/pcap",
+    "customer": "MyLab",
+    "tc_progress": "response_body",
+    "alert": {
+      "signature": "ET PHISHING Possible Phish - Mirrored Website Comment Observed",
+      "severity": 1,
+      "rev": 7,
+      "metadata": {
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "mitre_technique_id": [
+          "T1566"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "affected_product": [
+          "Web_Browsers"
+        ],
+        "tag": [
+          "Phishing"
+        ],
+        "confidence": [
+          "Low"
+        ],
+        "updated_at": [
+          "2023_12_19"
+        ],
+        "mitre_tactic_name": [
+          "Initial_Access"
+        ],
+        "created_at": [
+          "2014_03_21"
+        ],
+        "mitre_technique_name": [
+          "Phishing"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "mitre_tactic_id": [
+          "TA0001"
+        ]
+      },
+      "gid": 1,
+      "action": "allowed",
+      "category": "A Network Trojan was detected",
+      "signature_id": 2018302
+    },
+    "timestamp": "2026-05-25T17:56:09.168804+0700",
+    "type": "suricata-alerts",
+    "proto": "TCP",
+    "flow_id": 2004989628736165,
+    "event_type": "alert",
+    "direction": "to_client",
+    "agent": {
+      "name": "mylab",
+      "id": "c7cafb6c-2371-4ead-8bb9-024afbf25c3c",
+      "ephemeral_id": "5a2fd6c8-fbde-4daa-a357-24eb40c65f7d",
+      "version": "7.17.15",
+      "hostname": "mylab",
+      "type": "filebeat"
+    },
+    "files": [
+      {
+        "size": 45417,
+        "filename": "/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/arisf180.jpg",
+        "gaps": false,
+        "tx_id": 0,
+        "state": "UNKNOWN",
+        "stored": false
+      }
+    ],
+    "ip_v": 4,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "src_port": 80,
+    "tags": [
+      "beats_input_raw_event"
+    ],
+    "@timestamp": "2026-05-25T10:56:10.216Z",
+    "geo_location": {
+      "city_name": "Wayne",
+      "country_name": "United States",
+      "continent_code": "NA",
+      "location": {
+        "lat": 40.0574,
+        "lon": -75.4017
+      },
+      "country_code2": "US"
+    },
+    "payload": "dGlvbjwvVElUTEU+CiAgPE1FVEEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IiI+CiAgPE1FVEEgbmFtZT0ia2V5d29yZHMiIGNvbnRlbnQ9IiI+CiAgPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KdGFibGUuc2FtcGxlIHsKICBib3JkZXItd2lkdGg6IDVweCA1cHggNXB4IDVweDsKICBib3JkZXItc3BhY2luZzogMHB4OwogIGJvcmRlci1zdHlsZTogc29saWQgc29saWQgc29saWQgc29saWQ7CiAgYm9yZGVyLWNvbG9yOiBibGFjayBibGFjayBibGFjayBibGFjazsKICBib3JkZXItY29sbGFwc2U6IHNlcGFyYXRlOwogIGJhY2tncm91bmQtY29sb3I6IHdoaXRlOwp9CnRhYmxlLnNhbXBsZSB0aCB7CiAgYm9yZGVyLXdpZHRoOiAwcHggMHB4IDBweCAwcHg7CiAgcGFkZGluZzogMHB4IDBweCAwcHggMHB4OwogIGJvcmRlci1zdHlsZTogaW5zZXQgaW5zZXQgaW5zZXQgaW5zZXQ7CiAgYm9yZGVyLWNvbG9yOiBncmF5IGdyYXkgZ3JheSBncmF5OwogIGJhY2tncm91bmQtY29sb3I6IHdoaXRlOwogIC1tb3otYm9yZGVyLXJhZGl1czogMHB4IDBweCAwcHggMHB4Owp9CnRhYmxlLnNhbXBsZSB0ZCB7CiAgYm9yZGVyLXdpZHRoOiAwcHggMHB4IDBweCAwcHg7CiAgcGFkZGluZzogMHB4IDBweCAwcHggMHB4OwogIGJvcmRlci1zdHlsZTogaW5zZXQgaW5zZXQgaW5zZXQgaW5zZXQ7CiAgYm9yZGVyLWNvbG9yOiBncmF5IGdyYXkgZ3JheSBncmF5OwogIGJhY2tncm91bmQtY29sb3I6IHdoaXRlOwogIC1tb3otYm9yZGVyLXJhZGl1czogMHB4IDBweCAwcHggMHB4Owp9CgoudGhpc2NsYXNze2JhY2tncm91bmQtY29sb3I6IzAwNjZjYztoZWlnaHQ6IDMwcHggO30KLnRoaXNjbGFzczF7YmFja2dyb3VuZC1jb2xvcjojRkZGRjk5O2hlaWdodDogMzBweCA7fQoKPC9zdHlsZT4KPHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwDQo0M2U5DQp0Ij4KCmZ1bmN0aW9uIGNoYW5nZShjb2xvcil7CnZhciBlbD1ldmVudC5zcmNFbGVtZW50CmlmIChlbC50YWdOYW1lPT0iSU5QVVQiJiZlbC50eXBlPT0iYnV0dG9uIikKZXZlbnQuc3JjRWxlbWVudC5zdHlsZS5iYWNrZ3JvdW5kQ29sb3I9Y29sb3IKfQoKZnVuY3Rpb24ganVtcHRvMih1cmwpewp3aW5kb3cubG9jYXRpb249dXJsCn0KCjwvc2NyaXB0Pgo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgoKdG9kYXkgID0gbmV3IERhdGUoKTsKdG9kYXlFcG9jaCAgPSB0b2RheS5nZXRUaW1lKCk7Cgp0YXJnZXQgPSBuZXcgRGF0ZSgiMTAgU2VwdGVtYmVyLCAyMDA4Iik7CnRhcmdldEVwb2NoID0gdGFyZ2V0LmdldFRpbWUoKTsKCmRheXNMZWZ0VG9DYWJsZSA9IE1hdGguZmxvb3IoKCh0YXJnZXRFcG9jaCAtIHRvZGF5RXBvY2gpIC8gKDYwKjYwKjI0KSkgLyAxMDAwKTsKPC9zY3JpcHQ+CjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+Cgp0b2RheSAgPSBuZXcgRGF0ZSgpOwp0b2RheUVwb2NoICA9IHRvZGF5LmdldFRpbWUoKTsKCnRhcmdldCA9IG5ldyBEYXRlKCIwMyBBdWd1c3QsIDIwMDkiKTsKdGFyZ2V0RXBvY2ggPSB0YXJnZXQuZ2V0VGltZSgpOwoKZGF5c0xlZnQgPSBNYXRoLmZsb29yKCgodGFyZ2V0RXBvY2ggLSB0b2RheUVwb2NoKSAvICg2MCo2MCoyNCkpIC8gMTAwMCk7Cjwvc2NyaXB0Pgo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgoKdG9kYXkgID0gbmV3IERhdGUoKTsKdG9kYXlFcG9jaCAgPSB0b2RheS5nZXRUaW1lKCk7Cgp0YXJnZXQgPSBuZXcgRGF0ZSgiMjggSnVseSwgMjAwOCIpOwp0YXJnZXRFcG9jaCA9IHRhcmdldC5nZXRUaW1lKCk7CgpkYXlzTGVmdFRvUGFuQW0gPSBNYXRoLmZsb29yKCgodGFyZ2V0RXBvY2ggLSB0b2RheUVwb2NoKSAvICg2MCo2MCoyNCkpIC8gMTAwMCk7Cjwvc2NyaXB0Pgo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgoKdG9kYXkgID0gbmV3IERhdGUoKTsKdG9kYXlFcG9jaCAgPSB0b2RheS5nZXRUaW1lKCk7Cgp0YXJnZXQgPSBuZXcgRGF0ZSgiMzAgU2VwdGVtYmVyLCAyMDA4Iik7CnRhcmdldEVwb2NoID0gdGFyZ2V0LmdldFRpbWUoKTsKCmRheXNMZWZ0VG9GSVNVID0gTWF0aC5mbG9vcigoKHRhcmdldEVwb2NoIC0gdG9kYXlFcG9jaCkgLyAoNjAqNjAqMjQpKSAvIDEwMDApOwo8L3NjcmlwdD4KPHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCIgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KCnRvZGF5ICA9IG5ldyBEYXRlKCk7CnRvZGF5RXBvY2ggID0gdG9kYXkuZ2V0VGltZSgpOwoKdGFyZ2V0ID0gbmV3IERhdGUoIjcgSmFudWFyeSwgMjAwOSIpOwp0YXJnZXRFcG9jaCA9IHRhcmdldC5nZXRUaW1lKCk7CgpkYXlzTGVmdFRvV29ybGRKdW5pb3IgPSBNYXRoLmZsb29yKCgodGFyZ2V0RXBvY2ggLSB0b2RheUVwb2NoKSAvICg2MCo2MCoyNCkpIC8gMTAwMCk7Cjwvc2NyaXB0Pgo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgoKdG9kYXkgID0gbmV3IERhdGUoKTsKdG9kYXlFcG9jaCAgPSB0b2RheS5nZXRUaW1lKCk7Cgp0YXJnZXQgPSBuZXcgRGF0ZSgiMyBTZXB0ZW1iZXIsIDIwMTAiKTsKdGFyZ2V0RXBvY2ggPSB0YXJnZXQuZ2V0VGltZSgpOwoKZGF5c0xlZnRUb0xlaXN1cmVHYW1lcyA9IE1hdGguZmxvb3IoKCh0YXJnZXRFcG9jaCAtIHRvZGF5RXBvY2gpIC8gKDYwKjYwKjI0KSkgLyAxMDAwKTsKPC9zY3JpcHQ+CjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+Cgp0b2RheSAgPSBuZXcgRGF0ZSgpOwp0b2RheUVwb2NoICA9IHRvZGF5LmdldFRpbWUoKTsKCnRhcmdldCA9IG5ldyBEYXRlKCIyMyBKdWx5LCAyMDA5Iik7CnRhcmdldEVwb2NoID0gdGFyZ2V0LmdldFRpbWUoKTsKCmRheXNMZWZ0VG9Xb3JsZEdhbWVzID0gTWF0aC5mbG9vcigoKHRhcmdldEVwb2NoIC0gdG9kYXlFcG9jaCkgLyAoNjAqNjAqMjQpKSAvIDEwMDApOwo8L3NjcmlwdD4KCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KCiAgdmFyIF9nYXEgPSBfZ2FxIHx8IFtdOwogIF9nYXEucHVzaChbJ19zZXRBY2NvdW50ICdVQS0zMjk0ODk1Ni0xJ10pOwogIF9nYXEucHVzaChbJ190cmFja1BhZ2V2aWV3J10pOwoKICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsgZ2EudHlwZSA9ICd0ZXh0L2phdmFzY3JpcHQnOyBnYS5hc3luYyA9IHRydWU7CiAgICBnYS5zcmMgPSAoJ2h0dHBzOicgPT0gZG9jdW1lbnQubG9jYXRpb24ucHJvdG9jb2wgPyAnaHR0cHM6Ly9zc2wnIDogJ2h0dHA6Ly93d3cnKSArICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07IHMucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoZ2EsIHMpOwogIH0pKCk7Cgo8L3NjcmlwdD4KCjwvSEVBRD4KPCEtLSBCT0RZIEJHQ09MT1I9IkZGRkZGRiIgVEVYVD0iMDAwMDAwIiBMSU5LPSIwMDAwRkYiIFZMSU5LPSI4MDAwODAiIC0tPgo8IS0tIEJPRFkgQkFDS0dST1VORD0iYmx1ZS5naWYiIEJHQ09MT1I9IiNGREZERkQiIFRFWFQ9IiMwMDAwMDAiIExJTks9IiM2NjE4MDAiIFZMSU5LPSIjQTU0NjAwIiBBTElOSz0iI0E1NDYwMCIgLS0+CjxCT0RZIEJBQ0tHUk9VTkQ9ImxpZ2h0Ymx1ZS5naWYiIEJHQ09MT1I9IiNGREZERkQiIFRFWFQ9IiMwMDAwMDAiIExJTks9IiMwMDAwRkYiIFZMSU5LPSIjODAwMDgwIiBBTElOSz0iI0E1NDYwMCI+Cgo8dGFibGUgIGNlbGxzcGFjaW5nPTAgY2VsbHBhZGRpbmc9MD48dHI+PHRkIHZhbGlnbj10b3A+Cjxmb3JtID4KPGlucHV0IHR5cGU9ImJ1dHRvbiIgbmFtZT0iQnV0dG9uIiBjbGFzcz0idGhpc2NsYXNzMSIgdmFsdWU9IklXV0YiCgpzdHlsZT0iY29sb3I6IzAwNjZjYzsgZm9udC1mYW1pbHk6QXJpYWw7IGZvbnQtd2VpZ2h0OmJvbGQ7IGZvbnQtc2l6ZToxNHB4OyIKPgo8L2Zvcm0+CjwvdGQ+PHRkIHZhbGlnbj10b3A+Cjxmb3JtIG9uTW91c2VPdmVyPSJjaGFuZ2UoJyNGRkZGOTknKSIgb25Nb3Vz",
+    "src_ip": "216.250.121.9",
+    "stream": 1
+  },
+  "fields": {
+    "flow.start": [
+      "2026-05-25T10:56:07.991Z"
+    ],
+    "@timestamp": [
+      "2026-05-25T10:56:10.216Z"
+    ],
+    "timestamp": [
+      "2026-05-25T10:56:09.168Z"
+    ]
+  },
+    "sort": [
+    1779706570216
+  ]
+}
+{
+  "_index": "sensor",
+  "_id": "-5PHXp4BUYBMq4VWIj62",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "dest.ip": "216.250.121.9",
+    "log": {
+      "file": {
+        "path": "/var/log/remotelogs/192.168.93.1/draytek-syslog"
+      }
+    },
+    "agent": {
+      "name": "mylab",
+      "hostname": "mylab"
+    },
+    "message": "May 25 17:56:05 192.168.93.1 DrayTek: Local User (MAC=1A-2B-3C-4D-5E-6F): 192.168.92.123:60773 -> 216.250.121.9:80 (TCP)Web",
+    "src.ip": "192.168.92.123",
+    "src.port": 60773,
+    "ecs": {},
+    "src.mac": "14-85-7F-C0-6B-7E",
+    "@timestamp": "2026-05-25T10:56:09.260Z",
+    "customer": "MyLab",
+    "device.ip": "192.168.93.1",
+    "dest.port": 80,
+    "device.name": "DrayTek",
+    "network.protocol": "TCP",
+    "type": "draytek-syslog"
+  },
+  "fields": {
+    "@timestamp": [
+      "2026-05-25T10:56:09.260Z"
+    ]
+  },
+    "sort": [
+    1779706569260
+  ]
+}
+{
+  "_index": "sensor",
+  "_id": "BpPHXp4BUYBMq4VWIj5h",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "app_proto": "http",
+    "log": {
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      },
+      "offset": 111204802
+    },
+    "ts_progress": "request_complete",
+    "tx_id": 0,
+    "http": {
+      "url": "/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/arisf180.jpg",
+      "http_user_agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.6189.1627 Safari/537.36",
+      "protocol": "HTTP/1.1",
+      "http_content_type": "text/html",
+      "status": 200,
+      "length": 12508,
+      "http_method": "GET",
+      "http_refer": "http://www.iwsf.com/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/oldnews083103-030104.htm",
+      "hostname": "www.iwsf.com"
+    },
+    "flow": {
+      "src_port": 60773,
+      "bytes_toclient": 13406,
+      "start": "2026-05-25T17:56:07.991111+0700",
+      "bytes_toserver": 922,
+      "pkts_toclient": 12,
+      "dest_ip": "216.250.121.9",
+      "pkts_toserver": 4,
+      "src_ip": "192.168.92.123",
+      "dest_port": 80
+    },
+    "in_iface": "enp2s0",
+    "dest_ip": "216.250.121.9",
+    "dest_port": 80,
+    "pkt_src": "wire/pcap",
+    "customer": "MyLab",
+    "tc_progress": "response_body",
+    "alert": {
+      "signature": "🐾 - 🚨 Google Chrome / Chromium 🌐 for Windows 7 X86 unsupported 👴 and vulnerable",
+      "severity": 1,
+      "rev": 31,
+      "metadata": {
+        "updated_at": [
+          "2023_02_08"
+        ],
+        "created_at": [
+          "2021_05_12"
+        ]
+      },
+      "gid": 1,
+      "action": "allowed",
+      "category": "Potential Corporate Privacy Violation",
+      "signature_id": 3300004
+    },
+    "timestamp": "2026-05-25T17:56:08.623705+0700",
+    "type": "suricata-alerts",
+    "proto": "TCP",
+    "flow_id": 2004989628736165,
+    "event_type": "alert",
+    "direction": "to_server",
+    "agent": {
+      "name": "mylab",
+      "id": "c7cafb6c-2371-4ead-8bb9-024afbf25c3c",
+      "ephemeral_id": "5a2fd6c8-fbde-4daa-a357-24eb40c65f7d",
+      "version": "7.17.15",
+      "hostname": "mylab",
+      "type": "filebeat"
+    },
+    "ip_v": 4,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "src_port": 60773,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "@timestamp": "2026-05-25T10:56:09.246Z",
+    "geo_location": {},
+    "payload": "R0VUIC9pbmRleC5waHAvb3JnL2J5bGF3cy9hZ2VjaGFydC9hZ2VjaGFydC9zbGFsb21jb3Vyc2VsYXlvdXQvdG91cm1hbi9oaXN0b3J5L2hpc3RvcnkvdG91cm1hbi9zbGFsb21jb3Vyc2VsYXlvdXQvYWdlY2hhcnQvZGJoZWFkbGluZXMvaGVhZGxpbmVmaWxlcy9hcmlzZjE4MC5qcGcgSFRUUC8xLjENCkhvc3Q6IHd3dy5pd3NmLmNvbQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzYwLjAuNjE4OS4xNjI3IFNhZmFyaS81MzcuMzYNCkFjY2VwdDogaW1hZ2UvaGVpZixpbWFnZS9hdmlmLGltYWdlL3dlYnAsaW1hZ2UvYXBuZyxpbWFnZS9zdmcreG1sLGltYWdlLyosKi8qO3E9MC44DQpBY2NlcHQtRW5jb2Rpbmc6IGlkZW50aXR5DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTLGVuO3E9MC41DQpSYW5nZTogYnl0ZXM9MC00OTkNClJlZmVyZXI6IGh0dHA6Ly93d3cuaXdzZi5jb20vaW5kZXgucGhwL29yZy9ieWxhd3MvYWdlY2hhcnQvYWdlY2hhcnQvc2xhbG9tY291cnNlbGF5b3V0L3RvdXJtYW4vaGlzdG9yeS9oaXN0b3J5L3RvdXJtYW4vc2xhbG9tY291cnNlbGF5b3V0L2FnZWNoYXJ0L2RiaGVhZGxpbmVzL2hlYWRsaW5lZmlsZXMvb2xkbmV3czA4MzEwMy0wMzAxMDQuaHRtDQoNCg==",
+    "src_ip": "192.168.92.123",
+    "stream": 1
+  },
+  "fields": {
+    "flow.start": [
+      "2026-05-25T10:56:07.991Z"
+    ],
+    "@timestamp": [
+      "2026-05-25T10:56:09.246Z"
+    ],
+    "timestamp": [
+      "2026-05-25T10:56:08.623Z"
+    ]
+  },
+    "sort": [
+    1779706569246
+  ]
+}
+{
+  "_index": "sensor",
+  "_id": "ApPHXp4BUYBMq4VWIj5h",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "app_proto": "http",
+    "log": {
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      },
+      "offset": 111207294
+    },
+    "ts_progress": "request_complete",
+    "tx_id": 0,
+    "http": {
+      "url": "/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/arisf180.jpg",
+      "http_user_agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.6189.1627 Safari/537.36",
+      "protocol": "HTTP/1.1",
+      "http_content_type": "text/html",
+      "status": 200,
+      "length": 12508,
+      "http_method": "GET",
+      "http_refer": "http://www.iwsf.com/index.php/org/bylaws/agechart/agechart/slalomcourselayout/tourman/history/history/tourman/slalomcourselayout/agechart/dbheadlines/headlinefiles/oldnews083103-030104.htm",
+      "hostname": "www.iwsf.com"
+    },
+    "flow": {
+      "src_port": 60773,
+      "bytes_toclient": 13406,
+      "start": "2026-05-25T17:56:07.991111+0700",
+      "bytes_toserver": 922,
+      "pkts_toclient": 12,
+      "dest_ip": "216.250.121.9",
+      "pkts_toserver": 4,
+      "src_ip": "192.168.92.123",
+      "dest_port": 80
+    },
+    "in_iface": "enp2s0",
+    "dest_ip": "216.250.121.9",
+    "dest_port": 80,
+    "pkt_src": "wire/pcap",
+    "customer": "MyLab",
+    "tc_progress": "response_body",
+    "alert": {
+      "signature": "🐾 - 🚨 HTTP Connection ➡ Internet from 👴 possible 🪟 Windows 7 or Windows Server 2008",
+      "severity": 1,
+      "rev": 3,
+      "metadata": {
+        "updated_at": [
+          "2023_08_25"
+        ],
+        "created_at": [
+          "2023_01_30"
+        ]
+      },
+      "gid": 1,
+      "action": "allowed",
+      "category": "Potential Corporate Privacy Violation",
+      "signature_id": 3300018
+    },
+    "timestamp": "2026-05-25T17:56:08.623705+0700",
+    "type": "suricata-alerts",
+    "proto": "TCP",
+    "flow_id": 2004989628736165,
+    "event_type": "alert",
+    "direction": "to_server",
+    "agent": {
+      "name": "mylab",
+      "id": "c7cafb6c-2371-4ead-8bb9-024afbf25c3c",
+      "ephemeral_id": "5a2fd6c8-fbde-4daa-a357-24eb40c65f7d",
+      "version": "7.17.15",
+      "hostname": "mylab",
+      "type": "filebeat"
+    },
+    "ip_v": 4,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "src_port": 60773,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "@timestamp": "2026-05-25T10:56:09.244Z",
+    "geo_location": {},
+    "payload": "R0VUIC9pbmRleC5waHAvb3JnL2J5bGF3cy9hZ2VjaGFydC9hZ2VjaGFydC9zbGFsb21jb3Vyc2VsYXlvdXQvdG91cm1hbi9oaXN0b3J5L2hpc3RvcnkvdG91cm1hbi9zbGFsb21jb3Vyc2VsYXlvdXQvYWdlY2hhcnQvZGJoZWFkbGluZXMvaGVhZGxpbmVmaWxlcy9hcmlzZjE4MC5qcGcgSFRUUC8xLjENCkhvc3Q6IHd3dy5pd3NmLmNvbQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzYwLjAuNjE4OS4xNjI3IFNhZmFyaS81MzcuMzYNCkFjY2VwdDogaW1hZ2UvaGVpZixpbWFnZS9hdmlmLGltYWdlL3dlYnAsaW1hZ2UvYXBuZyxpbWFnZS9zdmcreG1sLGltYWdlLyosKi8qO3E9MC44DQpBY2NlcHQtRW5jb2Rpbmc6IGlkZW50aXR5DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTLGVuO3E9MC41DQpSYW5nZTogYnl0ZXM9MC00OTkNClJlZmVyZXI6IGh0dHA6Ly93d3cuaXdzZi5jb20vaW5kZXgucGhwL29yZy9ieWxhd3MvYWdlY2hhcnQvYWdlY2hhcnQvc2xhbG9tY291cnNlbGF5b3V0L3RvdXJtYW4vaGlzdG9yeS9oaXN0b3J5L3RvdXJtYW4vc2xhbG9tY291cnNlbGF5b3V0L2FnZWNoYXJ0L2RiaGVhZGxpbmVzL2hlYWRsaW5lZmlsZXMvb2xkbmV3czA4MzEwMy0wMzAxMDQuaHRtDQoNCg==",
+    "src_ip": "192.168.92.123",
+    "stream": 1
+  },
+  "fields": {
+    "flow.start": [
+      "2026-05-25T10:56:07.991Z"
+    ],
+    "@timestamp": [
+      "2026-05-25T10:56:09.244Z"
+    ],
+    "timestamp": [
+      "2026-05-25T10:56:08.623Z"
+    ]
+  },
+    "sort": [
+    1779706569244
+  ]
+}

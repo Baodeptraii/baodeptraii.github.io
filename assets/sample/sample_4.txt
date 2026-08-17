@@ -1,0 +1,1240 @@
+{
+  "_index": "sensor-suricata",
+  "_id": "-idG8J4BGJeD6mLEIdjY",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 1510081905452136,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor",
+      "name": "sensor"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:59:47.325347+0700",
+    "src_port": 61199,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 1691,
+      "src_port": 61199,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:59:33.286057+0700",
+      "pkts_toserver": 7,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 84843639,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:59:48.471Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:59:33.286Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:59:48.471Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:59:47.325Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147588471
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "EidG8J4BGJeD6mLEBokn",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 1510081905452136,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor",
+      "name": "sensor"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:59:40.024465+0700",
+    "src_port": 61199,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 1378,
+      "src_port": 61199,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:59:33.286057+0700",
+      "pkts_toserver": 6,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 84732063,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:59:41.384Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:59:33.286Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:59:41.384Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:59:40.024Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147581384
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "VSdF8J4BGJeD6mLE9lyB",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 1510081905452136,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor",
+      "name": "sensor"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:59:36.327278+0700",
+    "src_port": 61199,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 1065,
+      "src_port": 61199,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:59:33.286057+0700",
+      "pkts_toserver": 5,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 84702843,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:59:37.378Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:59:33.286Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:59:37.378Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:59:36.327Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147577378
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "4SdF8J4BGJeD6mLE7kXR",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 1510081905452136,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor",
+      "name": "sensor"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:59:34.517870+0700",
+    "src_port": 61199,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 752,
+      "src_port": 61199,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:59:33.286057+0700",
+      "pkts_toserver": 4,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 84690784,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:59:35.386Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:59:33.286Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:59:35.386Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:59:34.517Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147575386
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "pSdF8J4BGJeD6mLE60De",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 1510081905452136,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor",
+      "name": "sensor"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:59:33.580622+0700",
+    "src_port": 61199,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 439,
+      "src_port": 61199,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:59:33.286057+0700",
+      "pkts_toserver": 3,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 84660687,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:59:34.674Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:59:33.286Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:59:34.674Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:59:33.580Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147574674
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "1SVF8J4BGJeD6mLEaegx",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "metadata": {
+      "flowints": {
+        "tcp.retransmission.count": 3
+      }
+    },
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 996171279904667,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor",
+      "name": "sensor"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:58:59.807926+0700",
+    "src_port": 60715,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 2130,
+      "src_port": 60715,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:57:23.494083+0700",
+      "pkts_toserver": 10,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 84094489,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:59:01.219Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:57:23.494Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:59:01.219Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:58:59.807Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147541219
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "OSVF8J4BGJeD6mLEJj0W",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "metadata": {
+      "flowints": {
+        "tcp.retransmission.count": 1
+      }
+    },
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 451148592443452,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor-01",
+      "name": "sensor-01"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:58:42.647797+0700",
+    "src_port": 60939,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 2064,
+      "src_port": 60939,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:58:17.236113+0700",
+      "pkts_toserver": 9,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 83684963,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:58:44.037Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:58:17.236Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:58:44.037Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:58:42.647Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147524037
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "rCRE8J4BGJeD6mLE9r_t",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 451148592443452,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor-01",
+      "name": "sensor-01"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:58:29.684426+0700",
+    "src_port": 60939,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 1691,
+      "src_port": 60939,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:58:17.236113+0700",
+      "pkts_toserver": 7,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 83460526,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:58:31.953Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:58:17.236Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:58:31.953Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:58:29.684Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147511953
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "gyRE8J4BGJeD6mLE221f",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 451148592443452,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor-01",
+      "name": "sensor-01"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:58:23.194823+0700",
+    "src_port": 60939,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 1378,
+      "src_port": 60939,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:58:17.236113+0700",
+      "pkts_toserver": 6,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 83340504,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:58:24.889Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:58:17.236Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:58:24.889Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:58:23.194Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147504889
+  ]
+}
+{
+  "_index": "sensor-suricata",
+  "_id": "tyRE8J4BGJeD6mLEz03P",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "geo_location": {},
+    "src_ip": "172.16.40.254",
+    "fields": {
+      "log_type": "suricata-alerts",
+      "tags": [
+        "suricata",
+        "cmccs-ids",
+        "customer"
+      ]
+    },
+    "dest_ip": "115.238.249.77",
+    "direction": "to_server",
+    "payload": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6ImxvZ2luIiwicGFyYW1zIjp7ImxvZ2luIjpudWxsLCJwYXNzIjpudWxsLCJhZ2VudCI6IiIsImFsZ28iOlsicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiLCJyeC8wIiwicngvMCIsInJ4LzAiXX19Cg==",
+    "pkt_src": "wire/pcap",
+    "in_iface": "enp8s0",
+    "flow_id": 451148592443452,
+    "event_type": "alert",
+    "dest_port": 52257,
+    "tags": [
+      "beats_input_raw_event",
+      "_geoip_lookup_failure"
+    ],
+    "proto": "TCP",
+    "customer": "customer",
+    "agent": {
+      "id": "dd760017-aacb-45b9-94ed-4f8ae7f05dcd",
+      "ephemeral_id": "03b7bbff-d80a-40c2-896d-d989fc79be09",
+      "type": "filebeat",
+      "version": "7.17.15",
+      "hostname": "sensor-01",
+      "name": "sensor-01"
+    },
+    "alert": {
+      "signature": "ET INFO Cryptocurrency Miner Checkin M2",
+      "gid": 1,
+      "signature_id": 2027316,
+      "metadata": {
+        "updated_at": [
+          "2019_07_26"
+        ],
+        "created_at": [
+          "2019_05_06"
+        ],
+        "signature_severity": [
+          "Major"
+        ],
+        "performance_impact": [
+          "Low"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ]
+      },
+      "category": "Potential Corporate Privacy Violation",
+      "severity": 1,
+      "action": "allowed",
+      "rev": 2
+    },
+    "timestamp": "2026-06-22T23:58:19.949869+0700",
+    "src_port": 60939,
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "ip_v": 4,
+    "flow": {
+      "bytes_toserver": 1065,
+      "src_port": 60939,
+      "bytes_toclient": 62,
+      "dest_ip": "115.238.249.77",
+      "dest_port": 52257,
+      "src_ip": "172.16.40.254",
+      "start": "2026-06-22T23:58:17.236113+0700",
+      "pkts_toserver": 5,
+      "pkts_toclient": 1
+    },
+    "log": {
+      "offset": 83137157,
+      "file": {
+        "path": "/var/log/suricata/eve.json"
+      }
+    },
+    "type": "suricata-alerts",
+    "stream": 0,
+    "@timestamp": "2026-06-22T16:58:21.920Z"
+  },
+  "fields": {
+    "flow.start": [
+      "2026-06-22T16:58:17.236Z"
+    ],
+    "@timestamp": [
+      "2026-06-22T16:58:21.920Z"
+    ],
+    "timestamp": [
+      "2026-06-22T16:58:19.949Z"
+    ]
+  },
+  "highlight": {
+    "alert.signature": [
+      "@opensearch-dashboards-highlighted-field@ET@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@INFO@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Cryptocurrency@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Miner@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@Checkin@/opensearch-dashboards-highlighted-field@ @opensearch-dashboards-highlighted-field@M2@/opensearch-dashboards-highlighted-field@"
+    ],
+    "alert.signature.keyword": [
+      "@opensearch-dashboards-highlighted-field@ET INFO Cryptocurrency Miner Checkin M2@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1782147501920
+  ]
+}
