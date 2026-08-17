@@ -5,6 +5,7 @@ categories: [network]
 tags: [networking, osi, tcp-ip, dns, nat, dhcp, wireshark, soc]
 ---
 
+Lâu quá ko lên post, sau 1 kì thực tập ở CMC CS, mình quyết định share lại cho ae những gì mình đã học được ở phòng SOC nhé.  
 Tuần đầu tiên mình dành để ôn lại nền tảng networking — thứ mà ae làm security nào cũng cần nắm chắc trước khi đi sâu vào các mảng khác. Note lại đây để sau này cần thì lật ra xem lại, kèm vài cái lab thực hành nho nhỏ với Wireshark, nslookup, dig, netstat, nmap.
 
 ## 1. Mô hình OSI - 7 tầng
@@ -57,6 +58,9 @@ Tuần đầu tiên mình dành để ôn lại nền tảng networking — th�
 - Quản lý, truy cập, truyền file.
 - Giao thức tiêu biểu: SMTP, LDAP, HTTP...
 - Thiết bị/dịch vụ liên quan: IDS, IPS, DHCP.
+
+<img width="1600" height="1598" alt="image" src="https://github.com/user-attachments/assets/99c560ec-ca9a-4079-a115-9a2cb26d3470" />
+
 
 > Quá trình đóng gói dữ liệu (**Encapsulation**) diễn ra khi đi từ tầng Ứng dụng xuống tầng Vật lý bên gửi (thêm header/trailer ở mỗi tầng), và quá trình **Decapsulation** (giải nén, gỡ bỏ header/trailer) diễn ra ngược lại ở bên nhận. PDU đổi tên qua từng tầng: Data → Segment → Packet → Frame → Bit.
 
@@ -211,21 +215,28 @@ Setup: máy Win 10 (IP `192.168.1.133`, đã cài Wireshark) và máy Ubuntu Ser
 
 Ping từ Win 10 sang Ubuntu Server thành công, và ping ngược lại từ Ubuntu Server sang Win 10 cũng thành công — xác nhận 2 máy đã thông mạng với nhau, sẵn sàng cho các lab bắt gói tin ở phần sau.
 
-*(Chèn ảnh: kết quả `ping` trên Command Prompt của Win 10 và trên terminal Ubuntu)*
+<img width="1004" height="797" alt="image" src="https://github.com/user-attachments/assets/92332af7-a3fe-4acf-8b53-b36b1e545f41" />
+<img width="1004" height="748" alt="image" src="https://github.com/user-attachments/assets/bcbca10e-0cc5-42f9-8fab-449f4fa8dfad" />
+
 
 ### Lab 1.2 — Bắt gói tin với Wireshark
 
 Thực hiện ping ra ngoài Internet, tạo thêm một số truy vấn: ping, nslookup, truy cập vài trang web, rồi mở Wireshark lên phân tích.
 
 - **Lọc gói DNS**: thấy các domain được resolve như `google.com`, `instagram.com`, `xpaywalletcdn-prod.azureedge.net`, `p01.afd.azureedge.net`... đi kèm các record A và CNAME.
+<img width="1004" height="509" alt="image" src="https://github.com/user-attachments/assets/19c78e06-a57d-4e1b-8ce7-c30493d11ca1" />
+
 - **Lọc gói HTTP**: bắt được request `GET` và response trả về `200 OK`.
+<img width="1004" height="516" alt="image" src="https://github.com/user-attachments/assets/c42d771b-e61f-4793-be7a-ac4695629773" />
+
 - **Lọc gói chứa cờ SYN** bằng filter:
   ```
   tcp.flags.syn == 1
   ```
-- **Follow TCP Stream** để quan sát rõ quy trình bắt tay: 3 gói đầu tiên trong stream thực hiện 3-way handshake (SYN → SYN/ACK → ACK), từ gói thứ 4 trở đi là quá trình giao tiếp thật sự giữa client và server.
+<img width="1004" height="424" alt="image" src="https://github.com/user-attachments/assets/4c6197b5-6f26-43ce-a2ad-ba30c142c48c" />
 
-*(Chèn ảnh: các filter DNS/HTTP/tcp.flags.syn trên Wireshark, và cửa sổ Follow TCP Stream)*
+- **Follow TCP Stream** để quan sát rõ quy trình bắt tay: 3 gói đầu tiên trong stream thực hiện 3-way handshake (SYN → SYN/ACK → ACK), từ gói thứ 4 trở đi là quá trình giao tiếp thật sự giữa client và server.
+<img width="1004" height="339" alt="image" src="https://github.com/user-attachments/assets/bd894537-526d-45b0-b19f-c3a5ea9bb3d4" />
 
 ### Lab 1.3 — Tra cứu DNS thủ công
 
@@ -236,6 +247,7 @@ nslookup google.com
 nslookup -type=MX google.com
 nslookup -type=TXT google.com
 ```
+<img width="1004" height="785" alt="image" src="https://github.com/user-attachments/assets/a438b7c2-d6b9-4b8d-ab9b-2bfe2322dbaf" />
 
 Kết quả cho thấy IP của `google.com`, mail exchanger (`smtp.google.com` với MX preference = 10), và loạt TXT record dùng để xác thực domain (Google site verification, Facebook domain verification, Docusign, Apple domain verification...).
 
@@ -245,6 +257,7 @@ Trên **Linux**, dùng `dig`:
 dig google.com
 dig google.com MX
 ```
+<img width="1004" height="885" alt="image" src="https://github.com/user-attachments/assets/0e003a30-511d-4457-851b-692b49e72f7c" />
 
 Kết quả tương tự nslookup nhưng hiển thị chi tiết hơn: query time, server trả lời, TTL...
 
@@ -256,7 +269,7 @@ Quay lại Wireshark để đối chiếu gói tin DNS thực tế:
 - So sánh **Transaction ID** giữa query và response (phải trùng nhau) — đây là cách phân biệt cặp query/response khi có nhiều truy vấn diễn ra cùng lúc.
 - Quan sát thêm: gói query dùng **port đích 53**, gói response trả về từ **port nguồn 53**.
 
-*(Chèn ảnh: nslookup/dig trên terminal, và các gói DNS query/response trên Wireshark)*
+<img width="1004" height="397" alt="image" src="https://github.com/user-attachments/assets/0128b3e2-7176-47a1-bfc9-ccf07b761ae6" />
 
 ### Lab 1.4 — Kiểm tra port và dịch vụ đang chạy
 
@@ -265,6 +278,7 @@ Trên **Windows**:
 ```
 netstat -ano
 ```
+<img width="1004" height="982" alt="image" src="https://github.com/user-attachments/assets/bfc566a7-93e9-41d8-9eb7-7b350c928935" />
 
 Liệt kê toàn bộ port cùng trạng thái (`LISTENING`, `ESTABLISHED`, `CLOSE_WAIT`...) kèm PID tương ứng. Đối chiếu PID với **Task Manager → Details** để biết process nào đang mở port nào.
 
@@ -273,6 +287,7 @@ Trên **Linux**:
 ```bash
 sudo ss -tulnp
 ```
+<img width="1004" height="250" alt="image" src="https://github.com/user-attachments/assets/f1ecbd8e-2f2f-45d5-aa70-4eada7af0e4a" />
 
 Trong đó: `t` = TCP, `u` = UDP, `l` = listening, `n` = hiển thị dạng numeric, `p` = hiện tên process đi kèm port.
 
@@ -281,10 +296,10 @@ Cuối cùng, dùng **Nmap** quét từ máy Windows sang máy Linux để xác 
 ```
 nmap -sV 192.168.1.145
 ```
+<img width="1004" height="290" alt="image" src="https://github.com/user-attachments/assets/14dd9e37-4b40-46c2-968d-6259c68eb890" />
 
 Kết quả: port 22 (SSH — OpenSSH 8.9p1 Ubuntu), port 80 (HTTP — nginx 1.18.0), port 443 (SSL/HTTP — Elasticsearch Kibana). Tùy chọn `-sV` giúp liệt kê luôn version của service đang chạy trên từng cổng, rất hữu ích khi cần đánh giá bề mặt tấn công (attack surface) của một host.
 
-*(Chèn ảnh: netstat -ano, Task Manager, ss -tulnp, và kết quả nmap -sV)*
 
 ---
 
