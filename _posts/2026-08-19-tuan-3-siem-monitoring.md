@@ -1,6 +1,6 @@
 ---
 title: Tuần 3 — SIEM & Monitoring (ELK/Wazuh · Suricata · Zeek)
-date: 2026-08-31 10:00:00 +0700
+date: 2026-08-19 10:00:00 +0700
 categories: [siem]
 tags: [siem, edr, xdr, elk, wazuh, suricata, zeek, kql, mitre-attck, soc, threat-hunting]
 ---
