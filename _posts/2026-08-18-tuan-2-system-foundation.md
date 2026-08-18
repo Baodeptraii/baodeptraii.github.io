@@ -1,6 +1,6 @@
 ---
 title: "Tuần 2 — System Foundation"
-date: 2026-08-24 10:00:00 +0700
+date: 2026-08-18 10:00:00 +0700
 categories: [system]
 tags: [windows, linux, event-log, process, ssh, persistence, mitre-attck]
 ---
@@ -272,14 +272,14 @@ Tạo người dùng test mới bằng GUI (`CMC CS` / `123`), hoặc bằng Com
 net user CMC 1234 /add
 ```
 
-*(Chèn ảnh: tạo user qua GUI và qua `net user /add`)*
+<img width="532" height="205" alt="image" src="https://github.com/user-attachments/assets/a98949b5-fae7-4d51-9f56-cb8c3b2784c2" />
 
 Mở **Event Viewer → Filter Current Log**, lọc theo Event ID `4625` (Failed Logon) hoặc `4624` (Successful Logon):
 
 - Bộ lọc **4625** cho thấy các lần đăng nhập thất bại.
 - Bộ lọc **4624** cho thấy các lần đăng nhập thành công.
 
-*(Chèn ảnh: Filter Current Log và danh sách event 4624/4625)*
+<img width="571" height="565" alt="image" src="https://github.com/user-attachments/assets/1709fe2f-6475-45cb-9dbc-c6920b300b93" />
 
 Bóc tách chi tiết một event **4625** thực tế:
 
@@ -293,7 +293,7 @@ Bóc tách chi tiết một event **4625** thực tế:
 - **Nguồn kết nối**: `127.0.0.1` (localhost) — không phải từ mạng ngoài
 - **Authentication Package**: Negotiate, Logon Process: User32
 
-*(Chèn ảnh: chi tiết Event 4625 tab General)*
+<img width="1363" height="780" alt="image" src="https://github.com/user-attachments/assets/560cfc7a-a287-426f-9c6a-039332a15fe2" />
 
 Chuyển qua tab **Details → XML View** để xem raw data. Một điểm rất hay bị hiểu nhầm khi đọc XML:
 
@@ -316,7 +316,7 @@ Trong log ví dụ: `<Level>0</Level>` → tương ứng "Level: Information" hi
 - Mức độ "nghiêm trọng" thực sự của một audit event được thể hiện qua **Keywords** (`Audit Success` / `Audit Failure`) chứ không phải qua Level.
 - Trong log này: `<Keywords>0x8010000000000000</Keywords>` → decode ra là **Audit Failure**, đây mới là cờ cho biết "đây là một lần thất bại", khớp với "Keywords: Audit Failure" ở tab General.
 
-*(Chèn ảnh: XML View của event 4625)*
+<img width="1193" height="859" alt="image" src="https://github.com/user-attachments/assets/f21bce96-f59d-4f1d-86e6-9112b8058146" />
 
 Khi nào nên dùng General, khi nào nên dùng XML:
 
@@ -336,7 +336,7 @@ Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4625} -MaxEvents 10 | For
 Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4625} | Export-Csv -Path C:\Users\Public\failed_logons.csv -NoTypeInformation
 ```
 
-*(Chèn ảnh: kết quả Get-WinEvent trên PowerShell, và file CSV mở bằng Excel)*
+<img width="1206" height="877" alt="image" src="https://github.com/user-attachments/assets/02e8699c-ec91-4a80-b9b4-38793ea7d754" />
 
 ### Lab 2.2 — Linux Log
 
@@ -346,7 +346,7 @@ Thử SSH và đăng nhập nhiều lần với mật khẩu sai, cả với use
 sudo tail -n 50 /var/log/auth.log
 ```
 
-*(Chèn ảnh: kết quả ssh nhiều lần thất bại và log auth.log)*
+<img width="1276" height="809" alt="image" src="https://github.com/user-attachments/assets/d00385c9-321e-4177-828b-965306d7e207" />
 
 **Phân tích log `/var/log/auth.log` (SSH/PAM)** — máy bị "tấn công" từ `192.168.1.133`, đọc theo timeline:
 
@@ -360,7 +360,6 @@ sudo tail -n 50 /var/log/auth.log
 - **02:19:05** — Thử sudo thất bại: `sudo: pam_unix(sudo:auth): authentication failure` cho user bao khi chạy sudo.
 - **02:19:09** — Thử sudo thành công, đọc log auth: `COMMAND=/usr/bin/tail -n 50 /var/log/auth.log` → **kẻ tấn công dùng quyền root để đọc chính log này** (có thể để xóa dấu vết hoặc kiểm tra bị phát hiện chưa).
 
-*(Chèn ảnh: toàn bộ log timeline trên terminal)*
 
 Dùng `grep` để lọc theo keyword `Failed password` và `Invalid user`, hoặc dùng `journalctl`:
 
@@ -379,7 +378,6 @@ sudo grep "Accepted password" /var/log/auth.log | grep -oP 'from \K[\d.]+' | sor
 sudo grep "Accepted password" /var/log/auth.log | awk '{print $(NF-5)}' | sort | uniq -c
 ```
 
-*(Chèn ảnh: kết quả grep/journalctl và các lệnh đếm)*
 
 - **Thất bại**: chứa cụm `Failed password for` hoặc `Invalid user`.
 - **Thành công**: chứa cụm `Accepted password for` hoặc `Accepted publickey for`, thường theo sau là dòng `pam_unix(sshd:session): session opened for user`.
@@ -404,7 +402,6 @@ Hoặc dùng `netstat -ano` để xem nhanh trạng thái (State), địa chỉ 
 netstat -ano
 ```
 
-*(Chèn ảnh: Task Manager Details, Get-Process, Get-NetTCPConnection, netstat -ano)*
 
 Dùng thêm công cụ **Process Explorer** (Sysinternals) để soi sâu hơn:
 
@@ -412,7 +409,7 @@ Dùng thêm công cụ **Process Explorer** (Sysinternals) để soi sâu hơn:
 - Chọn **View → Show Process Tree** để xem toàn bộ chuỗi cha-con.
 - **Click đúp** vào một process để xem chi tiết: Image (Path, Command line, Autostart Location, Parent), TCP/IP (kết nối mạng của riêng process đó), và đặc biệt tab **Strings** — rất quan trọng để đọc các metadata/chuỗi ký tự nhúng trong tiến trình, giúp phát hiện dấu hiệu bất thường mà tên process không nói lên được.
 
-*(Chèn ảnh: Select Columns, Process Tree view, Properties dialog, tab Strings)*
+<img width="1909" height="874" alt="image" src="https://github.com/user-attachments/assets/47591c57-11e3-4d7b-96f2-eaffe4e583f9" />
 
 Trên **Linux**, kiểm tra các thư mục "nhạy cảm" mà attacker hay lợi dụng:
 
@@ -424,7 +421,6 @@ ls -la /dev/shm
 find /tmp /dev/shm -newermt "5 minutes ago" -type f
 ```
 
-*(Chèn ảnh: ls -la /tmp, /dev/shm, và kết quả find file mới tạo)*
 
 ### Lab 2.4 — Persistence mô phỏng
 
@@ -453,7 +449,6 @@ schtasks /create /tn "TestPersistence" /tr "powershell.exe -ExecutionPolicy Bypa
 
 Đăng xuất/đăng nhập lại (hoặc chạy `schtasks /run /tn "TestPersistence"`) để trigger task.
 
-*(Chèn ảnh: lệnh schtasks /create và /run trên PowerShell)*
 
 Kiểm tra task có thực sự chạy không (độc lập với log), xem trường **Last Run Time** và **Last Result** — nếu Last Result = `0` nghĩa là task đã chạy thành công, kèm kiểm tra file kết quả để chắc chắn log đã được ghi:
 
@@ -464,7 +459,6 @@ Get-Content C:\Users\Public\log.txt
 
 `/query` truy vấn thông tin task; `/v` verbose (chi tiết đầy đủ, gồm cả Last Run Time, Last Result); `/fo list` format output dạng danh sách dễ đọc thay vì bảng.
 
-*(Chèn ảnh: schtasks /query /v /fo list và nội dung log.txt)*
 
 Mở **Event Viewer → Applications and Services Logs → Microsoft → Windows → TaskScheduler → Operational**. Khi persistence được thực thi, nó tạo ra 1 log Warning và 6 log Information — đọc theo đúng chuỗi sự kiện:
 
@@ -476,11 +470,11 @@ Mở **Event Viewer → Applications and Services Logs → Microsoft → Windows
 - **Event ID 201** (Info) — Action được hoàn thành: task đã chạy thành công, script PowerShell thực thi không gặp lỗi và `return 0`.
 - **Event ID 102** (Info) — Task hoàn thành: `\TestPersistence` được thực thi thành công/hoàn thành bởi user SYSTEM.
 
-*(Chèn ảnh: chuỗi event 325 → 129 → 100 → 200 → 110 → 201 → 102 trong Event Viewer)*
+<img width="1909" height="868" alt="image" src="https://github.com/user-attachments/assets/66724a7b-6bb9-488b-96d0-d86005c96d6d" />
 
 Đối chiếu bằng **Process Explorer**: bắt được tiến trình `powershell.exe` xuất hiện đúng lúc task được trigger — nó là tiến trình con của `svchost.exe` (thông qua Task Scheduler service) và là tiến trình cha của `conhost.exe`. Chuỗi cha-con này khớp hoàn toàn với những gì log Event Viewer đã ghi lại.
 
-*(Chèn ảnh: Process Explorer highlight powershell.exe con của svchost.exe)*
+<img width="528" height="214" alt="image" src="https://github.com/user-attachments/assets/a8e24879-07b7-4d92-bed5-6cc54e6bc9b5" />
 
 Dọn dẹp sau khi test:
 
@@ -504,7 +498,6 @@ Lệnh này mở trình soạn thảo để chỉnh crontab của user hiện t�
 
 → Tương ứng kỹ thuật **T1053.003 (Cron)** trong MITRE ATT&CK. Trong thực tế, attacker thường thay `echo` bằng lệnh tải và chạy payload từ xa (`curl ... | bash`), và thường đặt lịch chạy lâu lâu 1 lần (ví dụ mỗi giờ) để tránh gây chú ý thay vì mỗi phút.
 
-*(Chèn ảnh: nano crontab với dòng cron mới thêm)*
 
 Chờ 1-2 phút rồi kiểm tra:
 
@@ -518,7 +511,6 @@ cat /tmp/cron_test.log
 
 Xác nhận thấy dòng log ghi nhận cron đã kích hoạt job theo đúng chu kỳ đặt ra, và file `/tmp/cron_test.log` đã có nội dung ghi vào đúng như mong đợi.
 
-*(Chèn ảnh: grep CRON /var/log/syslog, journalctl -u cron, và cat /tmp/cron_test.log)*
 
 ---
 
